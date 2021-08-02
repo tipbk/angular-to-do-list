@@ -1,11 +1,10 @@
 <label>Add List: </label>
-<input [(ngModel)]="userInput" placeholder="list">
+<input [(ngModel)]="userInput" placeholder="list" />
 <button (click)="addList()">Add</button>
 
 <div *ngFor="let element of mock; index as i">
-    <p>
-        {{element}} {{i}}
-        <button (click)="remove(i)">Remove</button>
-    </p>
-    
+  <p>
+    {{ element }}
+    <button (click)="remove(i)">Remove</button>
+  </p>
 </div>

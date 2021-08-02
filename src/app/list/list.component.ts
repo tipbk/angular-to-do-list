@@ -17,7 +17,9 @@ export class ListComponent implements OnInit {
   mock: string[] = ["First", "Second"]
 
   remove(value: number) {
-    this.mock.splice(value, 1)
+    let temp: string[] = this.mock;
+    temp.splice(value, 1)
+    this.mock = temp;
   }
 
   addList() {
